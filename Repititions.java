@@ -1,3 +1,5 @@
+// Question link - https://cses.fi/problemset/task/1069
+
 import java.util.Scanner;
 
 public class Repititions {
@@ -7,17 +9,21 @@ public class Repititions {
         char curChar = ' ';
         long res = 0, repeatingCharCount = 1;
 
-        for(char c: s.toCharArray()) {
-            if(curChar != c) {  
-                res = Math.max(res, repeatingCharCount);
-                repeatingCharCount = 1;
-                curChar = c;
-            } else {
-                repeatingCharCount++;
+        if (s == null || s.length() == 0) {
+            System.out.println("0");
+        } else {
+            for (char c : s.toCharArray()) {
+                if (curChar != c) {
+                    res = Math.max(res, repeatingCharCount);
+                    repeatingCharCount = 1;
+                    curChar = c;
+                } else {
+                    repeatingCharCount++;
+                }
             }
-        }
 
-        System.out.println(Math.max(res, repeatingCharCount));
+            System.out.println(Math.max(res, repeatingCharCount));
+        }
 
         scanner.close();
     }
