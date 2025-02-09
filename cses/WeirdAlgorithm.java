@@ -1,4 +1,5 @@
 // Question link - https://cses.fi/problemset/task/1068
+package cses;
 
 import java.util.Scanner;
 

@@ -14,7 +14,8 @@
 
 // SUCH A DUMMY SOLUTION FOR WHICH I THOUGHT IN TERMS OF RECURSION :(
 // Solution link - https://www.geeksforgeeks.org/cses-solutions-permutations/
-
+package cses;
+    
 import java.util.Scanner;
 
 public class STARPermutations {
