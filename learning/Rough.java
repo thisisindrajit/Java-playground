@@ -1,4 +1,5 @@
 package learning;
+
 // By default, class is private
 public class Rough {
     private int size;
