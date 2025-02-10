@@ -1,4 +1,5 @@
 package learning;
+
 import java.util.*;
 
 abstract class Animal {
