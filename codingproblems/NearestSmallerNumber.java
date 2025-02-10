@@ -10,7 +10,7 @@
 // Input: arr[] = {1, 3, 0, 2, 5}
 // Output:        {_, 1, _, 0, 2}
 
-package leetcode;
+package codingproblems;
 
 import java.util.Arrays;
 import java.util.Stack;

@@ -1,4 +1,6 @@
-package leetcode;
+// https://leetcode.com/problems/contains-duplicate/ 
+
+package codingproblems;
 
 import java.util.HashSet;
 

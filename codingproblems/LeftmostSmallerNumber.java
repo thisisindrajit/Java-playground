@@ -38,7 +38,7 @@
 // 2. aux_arr = [max, 3, 0, 0, 0, 0]
 // 3. res = [-1, 2, 2, -1, 2]
 
-package leetcode;
+package codingproblems;
 
 import java.util.Arrays;
 
