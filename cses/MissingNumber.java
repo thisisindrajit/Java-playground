@@ -2,6 +2,7 @@
 
 // Example - 6
 // Sum of elements from 1 to 6 is 6(6 + 1)/2 = 21 (1 + 2 + 3 + 4 + 5 + 6)
+
 package cses;
 
 import java.util.Scanner;
