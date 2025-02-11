@@ -16,6 +16,7 @@ class Solution {
             return 0;
         }
 
+        // Sorting takes O(nlogn) time. We can do better!
         Arrays.sort(nums);
         
         int res = Integer.MAX_VALUE, l = 0, r = nums.length - 4;
