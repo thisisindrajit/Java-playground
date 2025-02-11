@@ -5,16 +5,7 @@ package codingproblems;
 import java.util.HashSet;
 
 public class ContainsDuplicate {
-    public static void main(String args[]) {
-        Solution sol = new Solution();
-
-        System.out.println(sol.hasDuplicate(new int[]{ 1, 2, 3, 1 })); // Should return true
-        System.out.println(sol.hasDuplicate(new int[]{ 1, 2, 3, 4 })); // Should return false
-    }
-}
-
-class Solution {
-    public boolean hasDuplicate(int[] nums) {
+    private static boolean hasDuplicate(int[] nums) {
         // Create a HashSet to store the unique numbers. A set doesn't allow duplicates.
         HashSet<Integer> numSet = new HashSet<>();
 
@@ -29,5 +20,10 @@ class Solution {
         }
 
         return false;
+    }
+
+    public static void main(String args[]) {
+        System.out.println(hasDuplicate(new int[]{ 1, 2, 3, 1 })); // Should return true
+        System.out.println(hasDuplicate(new int[]{ 1, 2, 3, 4 })); // Should return false
     }
 }

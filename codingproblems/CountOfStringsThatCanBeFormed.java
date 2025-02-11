@@ -16,19 +16,44 @@
 package codingproblems;
 
 public class CountOfStringsThatCanBeFormed {
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-
-        System.out.println(sol.findCountOfStringsThatCanBeFormed(3)); // Should return 19
-        System.out.println(sol.findCountOfStringsThatCanBeFormed(4)); // Should return 39
-    }
-}
-
-class Solution {
-    public int findCountOfStringsThatCanBeFormed(int n) {
+    private static int findCountOfStringsThatCanBeFormed(int n) {
         int res = 0;
 
+        // Approaches that can be used:
+        // Backtracking (Brute force) [This can be found in geeksforgeeks link]
+        // Dynamic Programming (Optimization) [This can be found in geeksforgeeks link]
+        // Combinatorics (BEST APPROACH - O(1)) [https://claude.ai/chat/d3045001-38a5-4518-ba81-ae6238c281d2]
+
+        // Combinatorics approach (Taking example of n = 3)
+        // Case 1 - Only a's are used (aaa)
+        res += 1;
+
+        // Case 2 - No b, 2 c's are used (acc, cca, cac)
+        // We need to choose 2 positions for c's from n positions, others will be filled with a's (nC2 = n! / (n - 2)! * 2!)
+        res += (n * (n - 1)) / 2;
+
+        // Case 3 - No b, only 1 c is used (aca, aac, caa)
+        // We need to choose 1 position for c from n positions, others will be filled with a's (nC1 = n! / (n - 1)! * 1!)
+        res += n;
+
+        // Case 4 - No c, only 1 b is used (aba, aab, baa)
+        // We need to choose 1 position for b from n positions, others will be filled with a's (nC1 = n! / (n - 1)! * 1!)
+        res += n;
+
+        // Case 5 - One b and one c is used (abc, bac, bca, acb, cab, cba)
+        // We need to choose 1 position for b and 1 position for c from n positions, others will be filled with a's (nC2 = n! / (n - 2)! * 2!) and then 2 ways to arrange b and c
+        res += n * (n - 1);
+
+        // Case 6 - One b and two c's are used (bcb, ccb, bcc)
+        // We need to choose 2 positions for c and 1 position for b from n positions, others will be filled with a's (nC3 = n! / (n - 3)! * 3!) and then 3 ways to arrange b and c
+        res += (n * (n - 1) * (n - 2)) / 2;
 
         return res;
     }
+
+    public static void main(String[] args) {
+        System.out.println(findCountOfStringsThatCanBeFormed(3)); // Should return 19
+        System.out.println(findCountOfStringsThatCanBeFormed(4)); // Should return 39
+    }
 }
+

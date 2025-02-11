@@ -41,14 +41,7 @@ package codingproblems;
 import java.util.Arrays;
 
 public class LeftmostSmallerNumber {
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        System.out.println(Arrays.toString(sol.findLeftmostSmallerNumber(new int[]{ 2, 1, 3, 2, 1, 3 }, 3))); // Should return [-1, -1, 2, 1, -1, 2]
-    }
-}
-
-class Solution {
-    public int[] findLeftmostSmallerNumber(int[] nums, int m) {
+    private static int[] findLeftmostSmallerNumber(int[] nums, int m) {
         int[] res = new int[nums.length];
         int[] aux_arr = new int[m + 1];
         Arrays.fill(aux_arr, Integer.MAX_VALUE);
@@ -75,5 +68,9 @@ class Solution {
         }
 
         return res;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(findLeftmostSmallerNumber(new int[]{ 2, 1, 3, 2, 1, 3 }, 3))); // Should return [-1, -1, 2, 1, -1, 2]
     }
 }
