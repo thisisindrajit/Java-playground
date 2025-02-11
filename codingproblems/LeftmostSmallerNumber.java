@@ -68,9 +68,11 @@ class Solution {
 
         // Populate res
         for(int i = 0; i < nums.length; i++) {
+            // If no smaller element exists to the left, set -1
             if(aux_arr[nums[i] - 1] >= i) {
                 res[i] = -1;
             } else {
+                // Else get the minimum index from auxiliary array and then set the element
                 res[i] = nums[aux_arr[nums[i] - 1]];
             }
         }
