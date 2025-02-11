@@ -20,9 +20,7 @@
 // aux_arr = [max, 1, 3, 2, 0]
 
 // 3. Propagate the minimum indexes (aux_arr[i] = min(aux_arr[i], aux_arr[i - 1])
-// But why?
-// We update arr[x] = min(arr[x], arr[x-1]), ensuring that:
-//     - arr[x] stores the smallest index among all numbers {1, 2, ..., x}.
+// Explanation - We update arr[x] = min(arr[x], arr[x-1]), ensuring that arr[x] stores the smallest index among all numbers {1, 2, ..., x}.
 
 // aux_arr = [max, 1, 1, 1, 0]
  
@@ -45,7 +43,6 @@ import java.util.Arrays;
 public class LeftmostSmallerNumber {
     public static void main(String[] args) {
         Solution sol = new Solution();
-
         System.out.println(Arrays.toString(sol.findLeftmostSmallerNumber(new int[]{ 2, 1, 3, 2, 1, 3 }, 3))); // Should return [-1, -1, 2, 1, -1, 2]
     }
 }

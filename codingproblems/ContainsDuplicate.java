@@ -8,8 +8,8 @@ public class ContainsDuplicate {
     public static void main(String args[]) {
         Solution sol = new Solution();
 
-        System.out.println(sol.hasDuplicate(new int[]{1, 2, 3, 1})); // Should return true
-        System.out.println(sol.hasDuplicate(new int[]{1, 2, 3, 4})); // Should return false
+        System.out.println(sol.hasDuplicate(new int[]{ 1, 2, 3, 1 })); // Should return true
+        System.out.println(sol.hasDuplicate(new int[]{ 1, 2, 3, 4 })); // Should return false
     }
 }
 
