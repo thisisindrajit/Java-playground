@@ -35,6 +35,6 @@ public class SpanningSubarray {
     }
 
     public static void main(String[] args) {
-        System.out.println(lengthOfSpanningSubarray(new int[] { 1, 2, 3, 3, 2, 4, 1, 2, 2 })); // Should return 4
+        System.out.println(lengthOfSpanningSubarray(new int[]{ 1, 2, 3, 3, 2, 4, 1, 2, 2 })); // Should return 4
     }
 }

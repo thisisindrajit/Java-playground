@@ -40,15 +40,8 @@ public class NearestSmallerNumber {
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(findNearestSmallerNumbers(new int[] { 1, 6, 4, 10, 2, 5 }))); // Should
-                                                                                                         // return [-1,
-                                                                                                         // 1, 1, 4, 1,
-                                                                                                         // 2]
-        System.out.println(Arrays.toString(findNearestSmallerNumbers(new int[] { 1, 3, 0, 2, 5 }))); // Should return
-                                                                                                     // [-1, 1, -1, 0,
-                                                                                                     // 2]
-        System.out.println(Arrays.toString(findNearestSmallerNumbers(new int[] { 2, 1, 3, 2, 1, 3 }))); // Should return
-                                                                                                        // [-1, -1, 1,
-                                                                                                        // 1, -1, 1]
+        System.out.println(Arrays.toString(findNearestSmallerNumbers(new int[]{ 1, 6, 4, 10, 2, 5 }))); // Should return [-1, 1, 1, 4, 1, 2]
+        System.out.println(Arrays.toString(findNearestSmallerNumbers(new int[]{ 1, 3, 0, 2, 5 }))); // Should return [-1, 1, -1, 0, 2]
+        System.out.println(Arrays.toString(findNearestSmallerNumbers(new int[]{ 2, 1, 3, 2, 1, 3 }))); // Should return [-1, -1, 1, 1, -1, 1]
     }
 }
