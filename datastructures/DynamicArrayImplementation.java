@@ -53,7 +53,7 @@ public class DynamicArrayImplementation {
 // TODO: Change the implementation later to include generics so that the dynamic
 // array can store any kinds of similar elements. Also include exception
 // handling.
-class CustomDynamicArray {
+final class CustomDynamicArray {
     private int capacity;
     private int[] arr;
     private int nextIndexToStoreAt;
